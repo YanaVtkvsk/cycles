@@ -21,8 +21,8 @@ class SQRserviceTest {
     public void shouldCalculateBoundariesUnder() {
         SQRservice service = new SQRservice();
 
-        int actual = service.calculate(99, 200);
-        int expected = 5;
+        int actual = service.calculate(81, 100);
+        int expected = 1;
 
         Assertions.assertEquals(expected, actual);
 
@@ -32,8 +32,8 @@ class SQRserviceTest {
     public void shouldCalculateBoundariesOver() {
         SQRservice service = new SQRservice();
 
-        int actual = service.calculate(9604, 9802);
-        int expected = 2;
+        int actual = service.calculate(9801, 10_000);
+        int expected = 1;
 
         Assertions.assertEquals(expected, actual);
 
